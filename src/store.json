@@ -4,14 +4,14 @@
     "name": "Black Desk",
     "picture": "https://www.randomlists.com/img/things/desk.webp",
     "description": "A desk or bureau is a piece of furniture with a flat table-style work surface used in a school, office, home or the like for academic, professional or domestic activities such as reading, writing, or using equipment such as a computer.",
-    "price": 5
+    "price": 154
   },
   {
     "id": "petra",
     "name": "50 Inch Television",
     "picture": "https://www.randomlists.com/img/things/television.webp",
     "description": "A television (also known as a TV) is a machine with a screen. Televisions receive broadcasting signals and turn them into pictures and sound. The word 'television' comes from the words tele (Greek for far away) and vision (sight). Sometimes a television can look like a box.",
-    "price": 7
+    "price": 400
   },
   {
     "id": "christ",
@@ -25,7 +25,7 @@
     "name": "Leather Checkbook",
     "picture": "https://www.randomlists.com/img/things/checkbook.webp",
     "description": "A checkbook is a folder or small book containing preprinted paper instruments issued to checking account holders and used to pay for goods or services. A checkbook contains sequentially numbered checks that account holders can use as a bill of exchange.",
-    "price": 8
+    "price": 18
   },
   {
     "id": "chichenitza",
@@ -39,13 +39,13 @@
     "name": "Velvet Couch",
     "picture": "https://www.randomlists.com/img/things/sofa.webp",
     "description": "A couch is a sofa — an upholstered piece of furniture that seats more than one person. It's nice to have a couch that's big enough for your whole family to sit on while you watch TV.",
-    "price": 9
+    "price": 290
   },
   {
     "id": "tajmahal",
     "name": "Head & Shoulders Shampoo",
     "picture": "https://www.randomlists.com/img/things/shampoo.webp",
     "description": "Clean & Balanced Anti Dandruff Shampoo from Head & Shoulders gives you soft, manageable, great-looking hair. Fights dry scalp and leave hair clean & fresh.",
-    "price": 10
+    "price": 5
   }
 ]
