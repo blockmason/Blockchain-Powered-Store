@@ -1,26 +1,26 @@
 const { link } = require('@blockmason/link-sdk');
 
 const commentsMicroservice = link({
-    clientId: process.env.COM_LNK_CLIENT_ID,
-    clientSecret: process.env.COM_LNK_CLIENT_SECRET
+    clientId: "F8iCaGWKf2ZxafTf1MhZLuSu_SsgvDw8WEkwtf1JYw0",
+    clientSecret: "vsY5P7eDO4ljFXtx8rK8ljLFxfZ1KK1SDdns2ZceHBujmKizqNdLCwVXLj+HKtx"
 });
 
 
 module.exports = {
     commentsInMemory: [],
-    
-    addCommentsInMemory: function(comments) {
+
+    addCommentsInMemory: function (comments) {
         this.commentsInMemory.push(comments);
     },
 
-    postComment: async function(event) {
+    postComment: async function (event) {
         let textArea = $(event.target).closest("div.message-area").find("textarea");
-        let stampId = $(event.target).parents(".panel-stamp").find(".btn-own").data('id');
-    
+        let storeId = $(event.target).parents(".panel-store").find(".btn-own").data('id');
+
         if (textArea.val() !== '') {
             message = textArea.val();
             const reqBody = {
-                "asset": stampId,
+                "asset": storeId,
                 "comment": message
             };
             this.addCommentsInMemory(reqBody);
@@ -31,7 +31,7 @@ module.exports = {
         await this.getComments();
     },
 
-    getComments: async function() {
+    getComments: async function () {
         const comments = await commentsMicroservice.get('/events/Comment');
         this.commentsInMemory = [];
         comments.data.forEach((data) => {
@@ -39,23 +39,23 @@ module.exports = {
         });
     },
 
-    printComments: function() {
+    printComments: function () {
         let comments = this.commentsInMemory;
         this.removeComments()
 
-         comments.forEach((commentObject) => {
+        comments.forEach((commentObject) => {
 
-             const commentsRow = document.getElementById(commentObject.asset);
+            const commentsRow = document.getElementById(commentObject.asset);
 
-             if (commentsRow != null) {
+            if (commentsRow != null) {
                 elChild = document.createElement('div');
-                elChild.innerHTML = "<div class='alert alert-warning'> '" + commentObject.comment + "' - SomeUser 1" + "</div>";
+                elChild.innerHTML = "<div class='alert alert-warning'> '" + commentObject.comment + "' - Verified Purchaser" + "</div>";
                 commentsRow.prepend(elChild);
             }
         });
     },
 
-    removeComments: function(){
+    removeComments: function () {
         $('.comments-row').children("div").remove();
     }
 }

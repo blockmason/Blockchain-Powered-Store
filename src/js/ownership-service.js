@@ -2,23 +2,23 @@ const { link } = require('@blockmason/link-sdk');
 
 // Ownership API on GoChain
 const ownershipMicroservice = link({
-    clientId: process.env.OWN_GC_CLIENT_ID,
-    clientSecret: process.env.OWN_GC_CLIENT_SECRET
+    clientId: "Q9cW9nnK_A3UEFUdxJ5Yu0T3E3Ys5gm2h2c-qzASJ9E",
+    clientSecret: "3z95vf3ZsTDquumD3fCbsJVpmQJ+6cK2NHEgnO5UXIvt6LlpAQfjErIqqssHIua"
 });
 
 module.exports = {
-    getOwner: function(asset) {
+    getOwner: function (asset) {
         const data = {
             "value": asset
         };
         return ownershipMicroservice.get('/ownerOf', data);
     },
 
-    getAuthority: function() {
+    getAuthority: function () {
         return ownershipMicroservice.get('/authority');
     },
 
-    setOwner: function(assetId, owner) {
+    setOwner: function (assetId, owner) {
         const reqBody = {
             "asset": assetId,
             "owner": owner

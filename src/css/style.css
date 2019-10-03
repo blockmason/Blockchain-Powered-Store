@@ -3,12 +3,10 @@
 }
 
 .container {
-    background-color: black;
+    background-color: rgb(1, 44, 78);
+    margin: 0px;
+    width: 100%;
 }
-
-/* .panel-body {
-    height: 530px;
-} */
 
 .panel-footer {
     height: 40px;
@@ -19,13 +17,61 @@
 }
 
 h1 {
-    color: yellow;
+    color: white;
 }
 
 h2 {
-    color: whitesmoke;
+    color: rgb(255, 215, 36);
+    font-size: 1em;
+    margin-bottom: -42px;
 }
 
 .message-area {
     padding-bottom: 1em
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.spacer{
+    height: 30px;
+    width: 100%;
+    background: white;
+    border-bottom: 0.2px solid lightgrey;
+}
+
+.shop {
+    color: white;
+    font-size: 2em;
+    margin-left: 80%;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+div.shop {
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+.store-container {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.store {
+    height: 820px;
+    margin-bottom: 55px;
+    overflow-y: auto;
+    overflow: -moz-scrollbars-none;
+}
+
+.store::-webkit-scrollbar { width: 0 !important }
+
+.login {
+    width: 160px;
+    margin-left: 80%;
+    margin-bottom: 30px;
+    margin-top: -60px;
 }

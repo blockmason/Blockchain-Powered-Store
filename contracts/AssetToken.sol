@@ -6,7 +6,7 @@ contract AssetToken {
     string public constant name = "Asset Token";
 
     // Name your custom token symbol
-    string public constant symbol = "ASSET";
+    string public constant symbol = "TOKEN";
 
     uint8 public constant decimals = 18;
     
@@ -28,7 +28,7 @@ contract AssetToken {
         owner = msg.sender;
 
         // Add your wallet address here which will contain your total token supply
-        treasury = address(0xFeE9813A4B268793D4Edc6DF11A760C3c07a2c98);
+        treasury = address(0xfe54015db0b55ac8a3ce66f5187772c47911d8a3);
 
         // Set your total token supply (default 1000)
         totalSupply = 250000 * 10**uint(decimals);
